@@ -23,10 +23,12 @@ Read more about App ID and API Key [here](https://documentation.onesignal.com/do
 
 ### Send a push notification to all users:
 
-    OneSignal::sendToAll('Hello, world!'); 
+    OneSignal::sendToAll($your_message); 
 
 ### Send a push notification to a user by external user ID:
 
-    OneSignal::sendToUser('external_user_id', 'Hello, world!');
+    OneSignal::sendToUser($external_user_id, $your_message);
+
+`$external_user_id` can be a string or an array of strings. If an array is given, all the given IDs will receive the notification.
 
 You can read more about External ID [here](https://documentation.onesignal.com/docs/users#external-id)

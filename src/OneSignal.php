@@ -12,7 +12,7 @@ class OneSignal
    *
    * @return void
    */
-  public static function sendToAll($message)
+  public static function sendToAll(string $message)
   {
     $fields = [
       'app_id' => config('onesignal.app_id'),
@@ -27,22 +27,27 @@ class OneSignal
   }
 
   /**
-   * Send push notification to a user by external user ID.
+   * Send a push notification to a user by external user ID.
    *
-   * @param string|int $user external user ID
+   * @param string|array $target
+   *   The external user ID(s) to be sent the notification. If an array is
+   *   given, all the given IDs will receive the notification.
+   *
    * @param string $message
+   *   The message to be sent to the user.
+   *
    * @return void
    */
-  public static function sendToUser($user, $message)
+  public static function sendToUser(string|array $target, string $message)
   {
     $fields = [
-      'app_id' =>  config('onesignal.app_id'),
+      'app_id' => config('onesignal.app_id'),
       'contents' => [
         'en' => $message
       ],
       'target_channel' => 'push',
       'include_aliases' => [
-        'external_id' => [$user]
+        'external_id' => is_array($target) ? $target : [$target]
       ],
     ];
 
@@ -58,7 +63,7 @@ class OneSignal
    * @throws \Exception
    *   If the request to the OneSignal API fails.
    */
-  private static function send($fields)
+  private static function send(array $fields)
   {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://api.onesignal.com/notifications');
