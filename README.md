@@ -2,7 +2,7 @@
 # OneSignal Push Notification
 A simple Laravel package for seamless integration with OneSignal push notification service
 
-[![License](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/license)](https://github.com/awaluddinkasim/onesignal-pushnotification/blob/main/README.md) [![PHP Version Require](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/require/php)](https://github.com/awaluddinkasim/onesignal-pushnotification)
+[![License](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/license)](https://github.com/awaluddinkasim/onesignal-pushnotification/blob/main/README.md) [![PHP Version Require](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/require/php)](https://github.com/awaluddinkasim/onesignal-pushnotification)
 
 ## Installation
 To install this package, simply run the following command:
