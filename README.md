@@ -29,10 +29,14 @@ Starting November 14 2024, OneSignal has implemented a new Rich API key system a
 
 ### Send a push notification to all users:
 
+    use AwaluddinKasim\OneSignalPushNotification\OneSignal;
+    
     OneSignal::sendToAll($your_message); 
 
 ### Send a push notification to a user by external user ID:
 
+    use AwaluddinKasim\OneSignalPushNotification\OneSignal;
+    
     OneSignal::sendToUser($external_user_id, $your_message);
 
 `$external_user_id` can be a string or an array of strings. If an array is given, all the given IDs will receive the notification.
