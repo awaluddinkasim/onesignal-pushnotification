@@ -2,7 +2,7 @@
 # OneSignal Push Notification
 A Laravel package for seamless integration with OneSignal push notification service
 
-[![Latest Stable Version](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/v)](https://packagist.org/packages/awaluddinkasim/onesignal-pushnotification) [![License](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/license)](https://github.com/awaluddinkasim/onesignal-pushnotification/blob/main/LICENSE.md) [![PHP Version Require](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/require/php)](https://packagist.org/packages/awaluddinkasim/onesignal-pushnotification)
+[![Latest Stable Version](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/v)](https://packagist.org/packages/awaluddinkasim/onesignal-pushnotification) [![License](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/license)](https://github.com/awaluddinkasim/onesignal-pushnotification/blob/main/LICENSE.md) [![PHP Version Require](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/require/php)](https://packagist.org/packages/awaluddinkasim/onesignal-pushnotification)
 
 ## Introduction
 OneSignal is a platform that offers multiple messaging channels including mobile push notifications, web push, SMS, email, and in-app messaging. This Laravel package specifically focuses on implementing push notifications (mobile and web push) functionality from OneSignal's services into your Laravel application. Check out the [documentation](https://documentation.onesignal.com/docs) for more information about OneSignal.
