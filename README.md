@@ -2,10 +2,10 @@
 # OneSignal Push Notification
 A Laravel package for seamless integration with OneSignal push notification service
 
-[![License](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/license)](https://github.com/awaluddinkasim/onesignal-pushnotification/blob/main/README.md) [![PHP Version Require](https://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/require/php)](https://github.com/awaluddinkasim/onesignal-pushnotification)
+[![Latest Stable Version](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/v)](https://packagist.org/packages/awaluddinkasim/onesignal-pushnotification) [![License](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/license)](https://github.com/awaluddinkasim/onesignal-pushnotification/blob/main/LICENSE.md) [![PHP Version Require](http://poser.pugx.org/awaluddinkasim/onesignal-pushnotification/require/php)](https://packagist.org/packages/awaluddinkasim/onesignal-pushnotification)
 
 ## Introduction
-OneSignal is platform that allows you to send push notifications to your users. This package provides a simple way to integrate OneSignal push notification service with your Laravel application. Check out the [documentation](https://documentation.onesignal.com/docs) for more information.
+OneSignal is a platform that offers multiple messaging channels including mobile push notifications, web push, SMS, email, and in-app messaging. This Laravel package specifically focuses on implementing push notifications (mobile and web push) functionality from OneSignal's services into your Laravel application. Check out the [documentation](https://documentation.onesignal.com/docs) for more information about OneSignal.
 
 ## Installation
 To install this package, simply run the following command:
@@ -23,6 +23,9 @@ Add your OneSignal App ID and API Key to your `.env` file:
     ONESIGNAL_API_KEY=xx_xx_xxx_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Read more about App ID and API Key [here](https://documentation.onesignal.com/docs/keys-and-ids#app-id)
+
+#### Note
+Starting November 14 2024, OneSignal has implemented a new Rich API key system and is deprecating legacy API keys. This package is updated to use the new Rich API key system.
 
 ### Send a push notification to all users:
 
