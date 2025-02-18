@@ -27,17 +27,24 @@ Check [here](https://documentation.onesignal.com/docs/keys-and-ids#app-id) for m
 #### Note
 Starting November 14 2024, OneSignal has implemented a new Rich API key system and is deprecating legacy API keys. This package is updated to use the new Rich API key system.
 
-### Send a push notification to all users:
+### Send a push notification to all subscribers:
 
     use AwaluddinKasim\OneSignalPushNotification\OneSignal;
     
     OneSignal::sendToAll($your_message); 
 
+
+### Send a push notification to specific segments:
+
+    use AwaluddinKasim\OneSignalPushNotification\OneSignal;
+    
+    OneSignal::sendToSegments($your_segments, $your_message);
+    
 ### Send a push notification to a user by external user ID:
 
     use AwaluddinKasim\OneSignalPushNotification\OneSignal;
     
-    OneSignal::sendToUser($external_user_id, $your_message);
+    OneSignal::sendToUsers($external_user_id, $your_message);
 
 `$external_user_id` can be a string or an array of strings. If an array is given, all the given IDs will receive the notification.
 
