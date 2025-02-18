@@ -55,6 +55,33 @@ class OneSignal
   }
 
   /**
+   * Send a push notification to specified segments.
+   *
+   * @param string|array $segments
+   *   The segment(s) to which the notification will be sent. If an array is
+   *   provided, notifications will be sent to all specified segments.
+   *
+   * @param string $message
+   *   The message to be sent to the segments.
+   *
+   * @return void
+   */
+
+  public static function sendToSegments(string|array $segments, string $message)
+  {
+    $fields = [
+      'app_id' => config('onesignal.app_id'),
+      'contents' => [
+        'en' => $message
+      ],
+      'target_channel' => 'push',
+      'included_segments' => is_array($segments) ? $segments : [$segments],
+    ];
+
+    self::send($fields);
+  }
+
+  /**
    * Send a OneSignal notification based on the given fields.
    *
    * @param array $fields
