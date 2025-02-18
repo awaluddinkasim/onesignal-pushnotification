@@ -38,7 +38,7 @@ class OneSignal
    *
    * @return void
    */
-  public static function sendToUser(string|array $target, string $message)
+  public static function sendToUsers(string|array $target, string $message)
   {
     $fields = [
       'app_id' => config('onesignal.app_id'),
